@@ -16,28 +16,27 @@
     PreparedStatement pstmt = null;
 
     // 데이터베이스에 저장
-    try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
-        String sql = "UPDATE user_mat_info SET mat_Onion=?, mat_Potato=?, mat_Greenonion=?, mat_Garlic=?, mat_Egg=?, mat_Chicken=?, mat_Beef=?, mat_Pork=?, mat_Kimchi=?, mat_Mushroom=? WHERE user_id=?";
-        pstmt = conn.prepareStatement(sql);
+try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
+    // 직접 문자열 연결을 사용하여 SQL 쿼리 작성
+    String sql = "UPDATE user_mat_info SET mat_Onion=" + request.getParameter("conion") +
+                 ", mat_Potato=" + request.getParameter("cpotato") +
+                 ", mat_Greenonion=" + request.getParameter("cgreen_onion") +
+                 ", mat_Garlic=" + request.getParameter("cgarlic") +
+                 ", mat_Egg=" + request.getParameter("cegg") +
+                 ", mat_Chicken=" + request.getParameter("cchicken") +
+                 ", mat_Beef=" + request.getParameter("cbeef") +
+                 ", mat_Pork=" + request.getParameter("cfork") +
+                 ", mat_Kimchi=" + request.getParameter("ckimchi") +
+                 ", mat_Mushroom=" + request.getParameter("cmushroom") +
+                 " WHERE user_id='" + user_id + "'"; // user_id는 SQL 인젝션 공격에 주의해야 함
 
-        // Setting parameters from request
-        pstmt.setInt(1, Integer.parseInt(request.getParameter("conion")));
-        pstmt.setInt(2, Integer.parseInt(request.getParameter("cpotato")));
-        pstmt.setInt(3, Integer.parseInt(request.getParameter("cgreen_onion")));
-        pstmt.setInt(4, Integer.parseInt(request.getParameter("cgarlic")));
-        pstmt.setInt(5, Integer.parseInt(request.getParameter("cegg")));
-        pstmt.setInt(6, Integer.parseInt(request.getParameter("cchicken")));
-        pstmt.setInt(7, Integer.parseInt(request.getParameter("cbeef")));
-        pstmt.setInt(8, Integer.parseInt(request.getParameter("cfork")));
-        pstmt.setInt(9, Integer.parseInt(request.getParameter("ckimchi")));
-        pstmt.setInt(10, Integer.parseInt(request.getParameter("cmushroom")));
-        pstmt.setString(11, user_id); // Replace with actual user_id
-
-        // Execute the query
-        pstmt.executeUpdate();
+    try (Statement stmt = conn.createStatement()) {
+        stmt.executeUpdate(sql);
         response.sendRedirect("My_page.jsp");
-    } catch (SQLException e) {
-        e.printStackTrace();
-        // 예외 처리 코드 작성
     }
+} catch (SQLException e) {
+    e.printStackTrace();
+    // 예외 처리 코드 작성
+}
+
 %>
