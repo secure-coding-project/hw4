@@ -16,15 +16,13 @@
             Connection connection = DriverManager.getConnection(url_mat, username_mat, password_mat);
 
             int post_num2 = Integer.parseInt(request.getParameter("post_num"));
-    			// 이제 receivedString을 사용할 수 있습니다.
-
+            // 이제 receivedString을 사용할 수 있습니다.
 
             if (post_num2 != 0) {
                 // 해당 user_id를 사용하여 user_mat_info에서 데이터 가져오기
-                String sql = "SELECT * FROM post_info WHERE post_num = ?";
-                try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-                    preparedStatement.setInt(1, post_num2);
-                    try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                String sql = "SELECT * FROM post_info WHERE post_num = " + post_num2;
+                try (Statement statement = connection.createStatement()) {
+                    try (ResultSet resultSet = statement.executeQuery(sql)) {
                         if (resultSet.next()) {
                             int mat_Onion = resultSet.getInt("mat_Onion");
                             int mat_Potato = resultSet.getInt("mat_Potato");
@@ -64,6 +62,7 @@
         }
     %>
 </div>
+
 
 </body>
 </html>

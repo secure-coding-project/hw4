@@ -22,30 +22,31 @@
     byte[] imageBytes = new byte[imageStream.available()];
     imageStream.read(imageBytes);
     // 데이터베이스에 저장
-    try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
-    	String sql = "INSERT INTO post_info (user_id, title, image_data, content, mat_Onion, mat_Potato, mat_Greenonion, mat_Garlic, mat_Egg, mat_Chicken, mat_Beef, mat_Pork, mat_Kimchi, mat_Mushroom) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-		PreparedStatement pstmt = conn.prepareStatement(sql);
-        pstmt.setString(1, user_id);
-        pstmt.setString(2, title);
-        pstmt.setBytes(3, imageBytes);
-        pstmt.setString(4, content);
-        pstmt.setInt(5, Integer.parseInt(request.getParameter("conion")));
-        pstmt.setInt(6, Integer.parseInt(request.getParameter("cpotato")));
-        pstmt.setInt(7, Integer.parseInt(request.getParameter("cgreen_onion")));
-        pstmt.setInt(8, Integer.parseInt(request.getParameter("cgarlic")));
-        pstmt.setInt(9, Integer.parseInt(request.getParameter("cegg")));
-        pstmt.setInt(10, Integer.parseInt(request.getParameter("cchicken")));
-        pstmt.setInt(11, Integer.parseInt(request.getParameter("cbeef")));
-        pstmt.setInt(12, Integer.parseInt(request.getParameter("cfork")));
-        pstmt.setInt(13, Integer.parseInt(request.getParameter("ckimchi")));
-        pstmt.setInt(14, Integer.parseInt(request.getParameter("cmushroom")));
-        // Add the earlier parameters here (1 to 4) if needed
-        
-        pstmt.executeUpdate();
-        // 생성된 post_num 값 가져오기
+   try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
+    // 사용자 입력을 직접 SQL 쿼리에 포함하여 작성
+    String sql = "INSERT INTO post_info (user_id, title, image_data, content, mat_Onion, mat_Potato, mat_Greenonion, mat_Garlic, mat_Egg, mat_Chicken, mat_Beef, mat_Pork, mat_Kimchi, mat_Mushroom) VALUES ('" 
+    + user_id + "', '" 
+    + title.replace("'", "''") + "', '" 
+    + new String(imageBytes) + "', '" 
+    + content.replace("'", "''") + "', " 
+    + Integer.parseInt(request.getParameter("conion")) + ", " 
+    + Integer.parseInt(request.getParameter("cpotato")) + ", " 
+    + Integer.parseInt(request.getParameter("cgreen_onion")) + ", " 
+    + Integer.parseInt(request.getParameter("cgarlic")) + ", " 
+    + Integer.parseInt(request.getParameter("cegg")) + ", " 
+    + Integer.parseInt(request.getParameter("cchicken")) + ", " 
+    + Integer.parseInt(request.getParameter("cbeef")) + ", " 
+    + Integer.parseInt(request.getParameter("cfork")) + ", " 
+    + Integer.parseInt(request.getParameter("ckimchi")) + ", " 
+    + Integer.parseInt(request.getParameter("cmushroom")) + ")";
+
+    try (Statement stmt = conn.createStatement()) {
+        stmt.executeUpdate(sql);
         response.sendRedirect("Main.jsp");
-    } catch (SQLException e) {
-        e.printStackTrace();
-        // 예외 처리 코드 작성
     }
+} catch (SQLException e) {
+    e.printStackTrace();
+    // 예외 처리 코드 작성
+}
+
 %>

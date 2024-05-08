@@ -20,11 +20,9 @@
 
             if (user_id != null) {
                 // 해당 user_id를 사용하여 user_mat_info에서 데이터 가져오기
-                String sql = "SELECT * FROM user_mat_info WHERE user_id = ?";
-                try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-                    preparedStatement.setString(1, user_id);
-
-                    try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                String sql = "SELECT * FROM user_mat_info WHERE user_id = '" + user_id + "'";
+                try (Statement statement = connection.createStatement()) {
+                    try (ResultSet resultSet = statement.executeQuery(sql)) {
                         if (resultSet.next()) {
                             int mat_Onion = resultSet.getInt("mat_Onion");
                             int mat_Potato = resultSet.getInt("mat_Potato");
@@ -66,6 +64,7 @@
         }
     %>
 </div>
+
 
 </body>
 </html>
