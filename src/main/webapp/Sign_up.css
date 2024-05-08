@@ -1,0 +1,209 @@
+   html{
+   height: 100%;
+   }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background: #001136;
+
+    }
+
+    .back_ground,
+    .back_ground * {
+      box-sizing: border-box;
+    }
+    .back_ground {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+    }
+    .Title {
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: absolute;
+      left: 47%;
+      top: 20%;
+      
+    }
+    .SignUp_Sign {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: absolute;
+      left: 43%;
+      top: 27%;
+    }
+    .Login_Sign {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: absolute;
+      left: 44%;
+      top: 27%;
+    }    
+    .EM {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: absolute;
+      left: 41%;
+      top: 35%;
+    }
+    .PW {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: absolute;
+      left: 41%;
+      top: 45%;
+    }
+    .submit_button {
+      color: #ffffff;
+      text-align: left;
+      font: 700 26px "Poppins-Bold", sans-serif;
+      position: absolute;
+      left: 41%;
+      top: 55%;
+
+    } 
+    .submit_button2 {
+      color: #ffffff;
+      text-align: left;
+      font: 700 26px "Poppins-Bold", sans-serif;
+      position: absolute;
+      left: 59%;
+      top: 55%;
+
+    }  
+   .Title_sign {
+      color: #f5f5f5;
+      text-align: left;
+      font: 600 48px "Poppins-SemiBold", sans-serif;
+      position: relative;
+    }
+
+    .Account_form {
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .SubTitle {
+      color: #ffffff;
+      text-align: left;
+      font: 400 24px "Poppins-Regular", sans-serif;
+      position: relative;
+    }
+
+    .Sign_up {
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .sign-up {
+      color: #1a83ff;
+      text-align: left;
+      font: 400 24px "Poppins-Regular", sans-serif;
+      position: relative;
+      text-decoration: none;
+    }
+
+    .sign-up>a {
+      text-decoration: none;
+      color: #1a83ff;
+    }
+
+
+    .email {
+      color: #ffffff;
+      text-align: left;
+      font: 400 14px "Poppins-Regular", sans-serif;
+      position: relative;
+      font-size: large;
+    }
+
+    .input_form {
+      border-radius: 4px;
+      border-style: solid;
+      border-color: #e4e4e4;
+      border-width: 1px;
+      padding: 21px 214px 21px 20px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+      font-size: large;
+    }
+
+    .email_form {
+      color: #ffffff;
+      text-align: left;
+      font: 300 16px "Poppins-Light", sans-serif;
+      position: relative;
+      font-size: large;
+    }
+
+    .password {
+      color: #ffffff;
+      text-align: left;
+      font: 400 14px "Poppins-Regular", sans-serif;
+      position: relative;
+
+    }
+
+    .password_form {
+      color: #ffffff;
+      text-align: left;
+      font: 300 16px "Poppins-Light", sans-serif;
+      position: relative;
+      font-size: large;
+    }
+
+
+
+    .submit_form {
+      background: #1a83ff;
+      border-radius: 4px;
+      padding: 14px 31px 14px 31px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: relative;
+      font-size: large;
+      color: #ffffff;
+      font: 700 25px "Poppins-Bold", sans-serif;
+
+    }
+
+
+  

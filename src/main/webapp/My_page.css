@@ -1,0 +1,330 @@
+@charset "EUC-KR";  @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Poppins:wght@500&display=swap');
+   html{
+   height: 100%;
+   }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background: #e8eaee;
+
+    }
+.post-page,
+.post-page * {
+  box-sizing: border-box;
+}
+.post-page {
+  background: var(--pagebackground, #e8eaee);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+}
+.navi {
+  border-radius: 20px 20px 20px 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 80%;
+  height: 80px; 
+  left: 10%; 
+  top: 5%; 
+  position: relative;
+  overflow: hidden;
+}
+.Logo img{
+	position: absolute; 
+	left: 0%; 
+  	top: 0%; 	
+  	width: 100%; height: 100%;
+}
+.Logo {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute; 
+  left: 10%; 
+  top: 5%; 
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  width: 120px;
+  height: 80px;
+  z-index: 5;
+  background-size: cover;
+}
+
+.Search {
+  background: #f0f0f0;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 4px 0 0 rgb(192, 192, 192),
+        0 4px 0 1px rgba(0,0,0,.4),
+        0 4px 4px 1px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 55px;
+  position: absolute;
+  left: 80%; /* 변경: px -> % */
+  top: 15%; /* 변경: px -> % */
+  width: auto;
+  /*box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);*/
+  overflow: hidden;
+  border: none;
+}
+.Search:active {
+  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 0 0 1px rgba(0,0,0,0.4);
+}
+.userid {
+  background: #f0f0f0;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 4px 0 0 rgb(192, 192, 192),
+        0 4px 0 1px rgba(0,0,0,.4),
+        0 4px 4px 1px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 55px;
+  position: absolute;
+  left: 90%; /* 변경: px -> % */
+  top: 15%; /* 변경: px -> % */
+  width: auto;
+  /*box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);*/
+  overflow: hidden;
+  
+  
+}
+.userid2 {
+  color: #665656;
+  text-align: center;
+  font: 550 20px/26px "Poppins", sans-serif;
+  position: relative;
+  border: none;
+}
+.userid:active{
+	  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 0 0 1px rgba(0,0,0,0.4);
+}
+
+.Button_form {
+  color: #665656;
+  text-align: center;
+  font: 550 20px/26px "Poppins", sans-serif;
+  position: relative;
+  border: none;
+}
+
+.results,
+.results * {
+  box-sizing: border-box;
+}
+.results {
+  background: var(--white, #ffffff);
+  border-radius: 20px 20px 20px 20px;
+  padding: 60px 70px 50px 80px;/* 위 오른쪽 아래 왼쪽*/
+  width: 80%; 
+  height: 70%; 
+  left: 10%; 
+  top: 8%;
+  position: relative;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: auto;
+  font-weight: 500;
+  font-size:20px;
+  line-height:2.0;
+  font-family:'Poppins', sans-serif;
+  text-align: center;
+}
+.profinf{
+	flex-direction: row;
+	display: flex;
+	  
+  justify-content: flex-start;
+  position: absolute;
+	left: 18%;
+  top: 25px;
+  width: 25%;
+  height: 12.2%;
+}
+.profileimg {
+  background: #d9d9d9;
+    width: 79px;
+  height: 79px;
+  border-radius: 50%;
+  position: relative;
+
+}
+.profileimg img{
+	position: absolute; 
+	left: 0%; 
+  	top: 0%; 	
+  	width: 100%; height: 100%;
+}
+.nick-name {
+  color: #000000;
+  text-align: left;
+  font: 500 20px/26px "Poppins-Medium", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  width:60%;
+  height: 100%;
+}
+.my_post {
+  background: #FCFCFC;
+  width: 30%;
+  height: 60%;
+  position: absolute;
+  left: 18%;
+  top: 20%;
+  overflow: scroll;
+  padding: 10px;
+  font: 550 24px/26px "Poppins-Medium", sans-serif;
+ 
+}
+
+.my_mat {
+  background: #FCFCFC;
+  width: 30%;
+  height: 60%;
+  position: absolute;
+  left: 52%;
+  top: 20%;
+  overflow: scroll;
+  font: 550 18px/26px "Poppins-Medium", sans-serif;
+}
+.my_mat > * {
+  margin-bottom: 10px;
+}
+.modifybutton {
+  color: #665656;
+  text-align: center;
+  font: 550 20px/26px "Poppins", sans-serif;
+  position: relative;
+  border: none;
+}
+.matmodify{
+background: #f0f0f0;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 4px 0 0 rgb(192, 192, 192),
+        0 4px 0 1px rgba(0,0,0,.4),
+        0 4px 4px 1px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 55px;
+  position: absolute;
+  left: 75%; /* 변경: px -> % */
+  top: 81%; /* 변경: px -> % */
+  width: auto;
+  /*box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);*/
+  overflow: hidden;
+  border: none;
+}
+.matmodify:active {
+  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 0 0 1px rgba(0,0,0,0.4);
+}
+.informmodifybutton {
+  color: #665656;
+  text-align: center;
+  font: 550 20px/26px "Poppins", sans-serif;
+  position: relative;
+  border: none;
+}
+.informmodify {
+background: #f0f0f0;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 4px 0 0 rgb(192, 192, 192),
+        0 4px 0 1px rgba(0,0,0,.4),
+        0 4px 4px 1px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+  position: absolute;
+	left: 40%;
+  top: 8%;
+  width: auto;
+  /*box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);*/
+  overflow: hidden;
+  border: none;
+}
+.informmodify:active {
+  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 0 0 1px rgba(0,0,0,0.4);
+}
+.postaddbutton {
+  color: #665656;
+  text-align: center;
+  font: 550 20px/26px "Poppins", sans-serif;
+  position: relative;
+  border: none;
+}
+.postadd{
+background: #f0f0f0;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 4px 0 0 rgb(192, 192, 192),
+        0 4px 0 1px rgba(0,0,0,.4),
+        0 4px 4px 1px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 55px;
+  position: absolute;
+  left: 41%; /* 변경: px -> % */
+  top: 81%; /* 변경: px -> % */
+  width: auto;
+  /*box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);*/
+  overflow: hidden;
+  border: none;
+}
+.postadd:active {
+  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 0 0 1px rgba(0,0,0,0.4);
+}

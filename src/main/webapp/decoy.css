@@ -1,0 +1,196 @@
+ @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Poppins:wght@500&display=swap');
+.material_list_div {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 30%;
+  height: 40%;
+  z-index: 200;
+  position: absolute;
+  left: 5%;
+  top: 25%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.for_x {
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 88%;
+  top: 0.1%;
+  overflow: hidden;
+}
+.x_button {
+   background-color: #ffffff;
+  color: #a3a3a3;
+  text-align: left;
+  font: 500 20px/26px "Poppins-Medium", sans-serif;
+  font-weight: bold;
+  border: none;
+  position: relative;
+}
+.for_hwakin {
+  background: #f0f0f0;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 4px 0 0 rgb(192, 192, 192),
+        0 4px 0 1px rgba(0,0,0,.4),
+        0 4px 4px 1px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+  position: absolute;
+  left: 73%; /* 변경: px -> % */
+  top: 80%; /* 변경: px -> % */
+  width: auto;
+  /*box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);*/
+  overflow: hidden;
+}
+.hwakin_button {
+       color: #665656;
+  text-align: center;
+  font: 550 20px/26px "Poppins", sans-serif;
+  position: relative;
+  border: none;
+}
+.for_hwakin:active{
+        box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 0 0 1px rgba(0,0,0,0.4);
+}
+.for_hwakin2 {
+  background: #f0f0f0;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 4px 0 0 rgb(192, 192, 192),
+        0 4px 0 1px rgba(0,0,0,.4),
+        0 4px 4px 1px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+  position: absolute;
+  left: 73%; /* 변경: px -> % */
+  top: 80%; /* 변경: px -> % */
+  width: auto;
+  /*box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);*/
+  overflow: hidden;
+}
+.hwakin_button2 {
+       color: #665656;
+  text-align: center;
+  font: 550 20px/26px "Poppins", sans-serif;
+  position: relative;
+  border: none;
+}
+.for_hwakin2:active{
+        box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 0 0 1px rgba(0,0,0,0.4);
+}
+
+.decoy_div{
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: #a3a3a3;
+   width: 100%;
+   height: 100%;
+   z-index: 100;
+   background-color: rgba( 255, 255, 255, 0.5 );
+   font: 600 20px "Poppins-SemiBold", sans-serif;
+}
+
+.mat_list{
+   position: absolute;
+   left:1%;
+   top:5%;
+   width: 90%;
+   height: 90%;
+   margin: 4% 5% 30% 4%;
+   text-align: center;
+}
+.mat_search{
+   position: absolute;
+   left:1%;
+   top:5%;
+   width: 90%;
+   height: 90%;
+   margin: 4% 5% 30% 4%;
+   text-align: center;
+}
+.mat_change{
+   position: absolute;
+   left:1%;
+   top:5%;
+   width: 90%;
+   height: 90%;
+   margin: 4% 5% 30% 4%;
+   text-align: center;
+}
+
+.minus_but{
+      height: 30px;
+   width:30px;
+          color: #665656;
+  text-align: center;
+  font: 550 20px/26px "Poppins", sans-serif;
+  position: relative;
+  border: none;
+}
+.mount_text{
+   border: none;
+   height: 30px;
+   width:70px;
+     text-align: center;
+  font: 500 20px/26px "Poppins-Medium", sans-serif;
+  font-weight: bold;
+  padding: 10px;
+}
+.plus_but{
+      height: 30px;
+   width:30px;
+          color: #665656;
+  text-align: center;
+  font: 550 20px/26px "Poppins", sans-serif;
+  position: relative;
+  border: none;
+}
+.searchtxt {
+    border: none;             /* Removes the default border */
+    border-bottom: 1px solid black; /* Adds a bottom border */
+    outline: none;            /* Removes the outline on focus */
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Adjust the width as needed */
+    padding-top:15px ;
+}
+td{
+text-align: center;
+  font: 550 20px/26px "Poppins", sans-serif;
+  position: relative;
+  border: none;
+}
+ input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
