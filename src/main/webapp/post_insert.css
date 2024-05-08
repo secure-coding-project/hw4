@@ -1,0 +1,248 @@
+@charset "EUC-KR";  @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Poppins:wght@500&display=swap');
+   html{
+   height: 100%;
+   }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background: #e8eaee;
+  font: 550 20px/26px "Poppins", sans-serif;
+    }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.post-page,
+.post-page * {
+  box-sizing: border-box;
+}
+.post-page {
+  background: var(--pagebackground, #e8eaee);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+}
+.main-text-div {
+  background: var(--white, #ffffff);
+  /*padding: 60px 70px 50px 80px;/* 위 오른쪽 아래 왼쪽*/
+  width: 80%; 
+  height: 49%; 
+  left: 10%; 
+  top: 23.5%;
+  position: relative;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: auto;
+  font-weight: 500;
+  font-size:20px;
+  line-height:2.0;
+  font-family:'Poppins', sans-serif;
+}
+.main_text_input{
+	padding-left:10px;
+	padding-top:10px;
+	padding-right: 10px;
+	border: none;
+	resize: none;
+	width: 94%;
+	height: 100%;
+	z-index: 20;
+	font-weight: 500;
+   font-size:20px;
+   line-height:2.0;
+   text-align: center;
+	  font-family:'Poppins', sans-serif;
+}
+.imginsertdiv{
+	z-index: 30;
+  background: #f0f0f0;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 4px 0 0 rgb(192, 192, 192),
+        0 4px 0 1px rgba(0,0,0,.4),
+        0 4px 4px 1px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+  width:45px;
+  position: absolute;
+  left: 94.5%; /* 변경: px -> % */
+  top: 3%; /* 변경: px -> % */
+  width: auto;
+  /*box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);*/
+  overflow: hidden;
+}
+.imginsertbutton {
+  	  color: #665656;
+  text-align: center;
+  font: 550 20px/26px "Poppins", sans-serif;
+  position: relative;
+  border: none;
+}
+.imginsertdiv:active{
+		  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 0 0 1px rgba(0,0,0,0.4);
+}
+.Logo img{
+	position: absolute; 
+	left: 0%; 
+  	top: 0%; 	
+  	width: 100%; height: 100%;
+}
+.Logo {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute; 
+  left: 10%; 
+  top: 5%; 
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  width: 120px;
+  height: 80px;
+  z-index: 5;
+  background-size: cover;
+}
+.submit-and-material {
+  background: var(--white, #ffffff);
+  border-radius: 0px 0px 20px 20px;
+  width: 80%;
+  height: 8%;
+  position: absolute;
+  left: 10%; 
+  top: 73%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, 1);
+  overflow: hidden;
+}
+.submit {
+    background: #000000;
+  background-color: #000000;
+  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 4px 0 0 rgb(192, 192, 192),
+        0 4px 0 1px rgba(0,0,0,.4),
+        0 4px 4px 1px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 55px;
+  position: absolute;
+  left: 91%; /* 변경: px -> % */
+  top: 6%; /* 변경: px -> % */
+  width: auto;
+  /*box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);*/
+  overflow: hidden;
+}
+.submit_button {
+	  background-color: #000000;
+	  color: #ffffff;
+  text-align: center;
+  font: 550 20px/26px "Poppins", sans-serif;
+  position: relative;
+  border: none;
+}
+.submit:active{
+		  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 0 0 1px rgba(0,0,0,0.4);
+}
+.material {
+background: #f0f0f0;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 4px 0 0 rgb(192, 192, 192),
+        0 4px 0 1px rgba(0,0,0,.4),
+        0 4px 4px 1px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 55px;
+  position: absolute;
+  left: 1%; /* 변경: px -> % */
+  top: 6%; /* 변경: px -> % */
+  width: auto;
+  /*box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);*/
+  overflow: hidden;
+}
+.material_button {
+	  color: #665656;
+  text-align: center;
+  font: 550 20px/26px "Poppins", sans-serif;
+  position: relative;
+  border: none;
+}
+.material:active{
+		  box-shadow: 0 0 0 1px #f0f0f0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 0 0 1px rgba(0,0,0,0.4);
+}
+.title-div {
+  background: var(--white, #ffffff);
+  border-radius: 20px 20px 0px 0px;
+  width: 80%;
+  height: 8%;
+  position: absolute;
+  left: 10%; 
+  top: 15.08%;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, 1);
+  overflow: hidden;
+}
+.title_text_input{
+	padding:10px;
+	border: none;
+	resize: none;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+	  font-weight: 500;
+  font-size:25px;
+  line-height:2.0;
+	  font-family:'Poppins', sans-serif;
+	  text-align: center;
+}
+
+
+.imginsertdiv input[type="file"] {
+	
+    position: absolute;
+    height: 200%;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    font-size: 0px;
+}
+.imginsertdiv label {
+	  color: #665656;
+  text-align: center;
+  font: 550 20px/26px "Poppins", sans-serif;
+  position: relative;
+  border: none;
+}
