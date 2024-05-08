@@ -6,7 +6,7 @@
 <%
     String url = "jdbc:mysql://localhost:3306/user";
     String username = "root";
-    String password = "root";
+    String password = "0000";
     Connection connection = null;
     PreparedStatement preparedStatement = null;
     PreparedStatement preparedStatement2 = null;

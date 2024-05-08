@@ -36,7 +36,7 @@
 <%
 String url = "jdbc:mysql://localhost:3306/user";
 String username = "root";
-String password = "root";
+String password = "0000";
 // title-> post_num
 int post_num = Integer.parseInt(request.getParameter("post_num"));
 

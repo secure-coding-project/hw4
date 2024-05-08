@@ -9,7 +9,7 @@
             // JDBC 연결 정보
             String url = "jdbc:mysql://localhost:3306/user";
             String username = "root";
-            String password = "root";
+            String password = "0000";
 
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");

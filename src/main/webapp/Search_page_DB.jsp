@@ -9,7 +9,7 @@
             <% 
                 String url = "jdbc:mysql://localhost:3306/user";
                 String username = "root";
-                String password = "root";
+                String password = "0000";
                 int monion = Integer.parseInt(request.getParameter("onion"));
                 int mpotato = Integer.parseInt(request.getParameter("potato"));
                 int mgreenonion = Integer.parseInt(request.getParameter("green_onion"));

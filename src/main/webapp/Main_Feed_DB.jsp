@@ -9,7 +9,7 @@
                 // JDBC 연결 정보
                 String url = "jdbc:mysql://localhost:3306/user";
                 String username = "root";
-                String password = "root";
+                String password = "0000";
                 
                 // 일정 값
                 int limit = -1; // 원하는 임계값으로 변경

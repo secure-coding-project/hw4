@@ -11,7 +11,7 @@
     // 데이터베이스 연결 정보
     String DB_URL = "jdbc:mysql://localhost:3306/user";
     String DB_USER = "root";
-    String DB_PASSWORD = "root";
+    String DB_PASSWORD = "0000";
 
     PreparedStatement pstmt = null;
 
