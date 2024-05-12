@@ -6,22 +6,22 @@
 <%@ page import="java.io.PrintWriter"%>
 
 <%
-    // ì´ í˜ì´ì§€ëŠ” Sign_upì—ì„œ ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê°’ì„ DBì— ë„£ì–´ì£¼ëŠ” ë¶€ë¶„
+    // ÀÌ ÆäÀÌÁö´Â Sign_up¿¡¼­ »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ» DB¿¡ ³Ö¾îÁÖ´Â ºÎºĞ
     request.setCharacterEncoding("EUC-KR");
     String userID = null;
     String userPassword = null;
     PrintWriter script = response.getWriter();
 
-    // userIDë¥¼ ì…ë ¥ë°›ëŠ” ë¶€ë¶„
+    // userID¸¦ ÀÔ·Â¹Ş´Â ºÎºĞ
     userID = request.getParameter("user_id");
     userPassword = request.getParameter("user_password");
-    // userPasswordë¥¼ ì…ë ¥ë°›ëŠ” ë¶€ë¶„
+    // userPassword¸¦ ÀÔ·Â¹Ş´Â ºÎºĞ
 
     if(userID == null || userPassword == null){
         script.println("<script>");
-        // ì‚¬ìš©ìê°€ ID, PW ë‘ ê°’ì„ ëª¨ë‘ ì…ë ¥í•˜ì§€ ì•Šìœ¼ë©´ ë°œìƒí•˜ëŠ” ì•ŒëŒ
+        // »ç¿ëÀÚ°¡ ID, PW µÎ °ªÀ» ¸ğµÎ ÀÔ·ÂÇÏÁö ¾ÊÀ¸¸é ¹ß»ıÇÏ´Â ¾Ë¶÷
         script.println("alert('Check your account');");
-        // ë‹¤ì‹œ í˜ì´ì§€ë¥¼ ì´ì „ìœ¼ë¡œ ë„˜ê¸°ëŠ” ê²ƒ
+        // ´Ù½Ã ÆäÀÌÁö¸¦ ÀÌÀüÀ¸·Î ³Ñ±â´Â °Í
         script.println("history.back();");
         script.println("</script>");
         script.close();
@@ -29,13 +29,18 @@
     }
 
     userDAO userDAO = new userDAO();
-    int result = userDAO.login(userID, userPassword); // ë¡œê·¸ì¸ ì‹œë„
+    if (!userID.matches("[A-Za-z0-9_]+") || !userPassword.matches("[A-Za-z0-9_]+")) {
+        script.println("<script>alert('Invalid user ID.'); history.back();</script>");
+        script.close();
+        return;
+    }
+    int result = userDAO.login(userID, userPassword); // ·Î±×ÀÎ ½Ãµµ
     if(result == 1){
-        // ë¡œê·¸ì¸ ì„±ê³µ ì‹œ ì„¸ì…˜ì„ ì„¤ì •í•˜ê³  ë©”ì¸ í˜ì´ì§€ë¡œ ì´ë™
+        // ·Î±×ÀÎ ¼º°ø ½Ã ¼¼¼ÇÀ» ¼³Á¤ÇÏ°í ¸ŞÀÎ ÆäÀÌÁö·Î ÀÌµ¿
         session.setAttribute("userID", userID);
         response.sendRedirect("Main.jsp");
     } else {
-        // ë¡œê·¸ì¸ ì‹¤íŒ¨ ì‹œ ì•Œë¦¼ì„ ë„ìš°ê³  ì´ì „ í˜ì´ì§€ë¡œ ì´ë™
+        // ·Î±×ÀÎ ½ÇÆĞ ½Ã ¾Ë¸²À» ¶ç¿ì°í ÀÌÀü ÆäÀÌÁö·Î ÀÌµ¿
         script.println("<script>");
         script.println("alert('Login failed. Check your ID and password.');");
         script.println("history.back();");
